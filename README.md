@@ -84,6 +84,16 @@ Gmail is connected via IMAP. The sync worker performs a six-month backfill on fi
 
 That rule is what keeps the inbox clean. You don't get a dump of your entire mailbox — you get the threads that involve people already in your world. New contacts aren't spawned from cold inbound; an existing known contact has to introduce them first.
 
+### Calendar sync
+
+Private iCal feeds are enrolled by URL. The worker fetches on a rolling three-month-back / three-month-forward window, respects ETags so it only re-fetches when something changed, expands recurring events correctly, and soft-deletes occurrences that disappear from the active window. Manual sync is a single click and fires promptly.
+
+Like mail, calendar data is read-only toward the upstream provider. Nothing is written back.
+
+### Contacts and organizations
+
+Contacts and their organizations are the connective tissue that makes the rest useful. Mail and calendar data is project-scoped through contacts — a message or event only surfaces in a shell's context if a participant's organization maps to a project the shell is working on. Unfiled data stays unfiled.
+
 ```stats
 :::class1
 value: Read-only
@@ -98,16 +108,6 @@ value: Contact-gated
 label: Thread ingestion
 description: Only threads with known participants enter
 ```
-
-### Calendar sync
-
-Private iCal feeds are enrolled by URL. The worker fetches on a rolling three-month-back / three-month-forward window, respects ETags so it only re-fetches when something changed, expands recurring events correctly, and soft-deletes occurrences that disappear from the active window. Manual sync is a single click and fires promptly.
-
-Like mail, calendar data is read-only toward the upstream provider. Nothing is written back.
-
-### Contacts and organizations
-
-Contacts and their organizations are the connective tissue that makes the rest useful. Mail and calendar data is project-scoped through contacts — a message or event only surfaces in a shell's context if a participant's organization maps to a project the shell is working on. Unfiled data stays unfiled.
 
 ## Documents
 
