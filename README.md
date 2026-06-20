@@ -30,7 +30,7 @@ The substrate is built on four composable layers:
 
 ### The shell concept
 
-Memory systems exist. Identity-as-instance-curated against an ongoing directive is a different unit of abstraction — and the difference is load-bearing. A shell isn't "AI with memory." It's an agent whose identity — lessons, stances, a core seed — is managed by the agent itself, against its directive and the work it's doing. The substrate handles authentication, session management, and the memory store; the shell handles itself.
+Memory systems exist. Identity-as-instance-curated against an ongoing directive is a different unit of abstraction — and that difference does real work. A shell isn't "AI with memory." It's an agent whose identity — lessons, stances, a core seed — is managed by the agent itself, against its directive and the work it's doing. The substrate handles authentication, session management, and the memory store; the shell handles itself.
 
 ## Meeting Intelligence
 
