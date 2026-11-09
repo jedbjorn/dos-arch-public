@@ -168,3 +168,8 @@ Windows Capture :::class1 -> iOS + macOS Capture :::class2 -> Processing Pipelin
 
 > [!class2]
 > The private dos-arch repository is where active development happens. Public access to the full platform is on the roadmap — this repo is the first step out.
+
+## designs-os.com
+
+`site/` is the public site at https://designs-os.com (dos-arch privacy policy and terms of service),
+deployed by Cloudflare Pages on every push to `main` (no build step; output directory `site`).
