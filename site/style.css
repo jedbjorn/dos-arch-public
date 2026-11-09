@@ -1,0 +1,75 @@
+/* dos-arch legal site: one small stylesheet, no external resources. */
+:root {
+  --text: #1f2328;
+  --muted: #59636e;
+  --line: #d8dee4;
+  --link: #0b5cad;
+  --bg: #ffffff;
+  --note: #f6f8fa;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header {
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+header nav { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: baseline; }
+header .brand { font-weight: 600; color: var(--text); text-decoration: none; margin-right: auto; }
+
+main { padding-top: 1.5rem; padding-bottom: 2rem; }
+
+h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.25rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 1.25rem 0 0.25rem; }
+
+p, ul, ol { margin: 0 0 0.9rem; }
+li { margin-bottom: 0.3rem; }
+
+a { color: var(--link); }
+a:hover { text-decoration-thickness: 2px; }
+
+.updated { color: var(--muted); margin-bottom: 1.5rem; }
+
+.note {
+  background: var(--note);
+  border-left: 4px solid var(--link);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+}
+
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; overflow-wrap: anywhere; }
+
+address { font-style: normal; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media print {
+  header nav, footer { display: none; }
+  a { color: inherit; }
+}
